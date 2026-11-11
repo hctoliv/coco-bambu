@@ -38,15 +38,17 @@
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-  function closeNav() { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Abrir menu'); document.body.style.overflow = ''; }
+  function closeNav() { nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Abrir menu'); document.documentElement.classList.remove('nav-open'); }
   burger.addEventListener('click', function () {
     var open = !nav.classList.contains('open');
     nav.classList.toggle('open', open);
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
-    document.body.style.overflow = open ? 'hidden' : '';
+    document.documentElement.classList.toggle('nav-open', open);
   });
   $$('a', nav).forEach(function (a) { a.addEventListener('click', closeNav); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) closeNav(); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 900 && nav.classList.contains('open')) closeNav(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeNav(); });
 
   /* ---------- reveal ---------- */

@@ -40,7 +40,11 @@ html.intro-off .intro,.intro.done{opacity:0;visibility:hidden;pointer-events:non
 
 /* ---------- header ---------- */
 .hd{position:fixed;top:0;left:0;right:0;z-index:50;background:linear-gradient(180deg,rgba(26,6,3,.6),rgba(26,6,3,0));height:var(--hd);display:flex;align-items:center;gap:28px;padding:0 var(--pad);padding-top:env(safe-area-inset-top);transition:background .4s,box-shadow .4s,height .4s}
-.hd.solid{background:rgba(42,12,7,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
+.hd.solid{background:transparent;box-shadow:0 1px 0 var(--line)}
+/* fundo com blur num pseudo-elemento: backdrop-filter no próprio .hd prendia o menu mobile (position:fixed) dentro do header */
+.hd::before{content:"";position:absolute;inset:0;z-index:-2;background:rgba(42,12,7,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);opacity:0;transition:opacity .4s;pointer-events:none}
+.hd.solid::before{opacity:1}
+html.nav-open,html.nav-open body{overflow:hidden}
 .hd__logo img{width:150px;height:auto}
 .hd__nav{display:flex;gap:30px;margin-left:auto}
 .hd__nav a{color:var(--cream);text-decoration:none;font:500 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;position:relative;padding:6px 0}
@@ -252,9 +256,9 @@ html.intro-off .intro,.intro.done{opacity:0;visibility:hidden;pointer-events:non
   .hd__logo img{width:128px}
   .hd>.hd__cta{display:none}
   .hd__burger{display:block;margin-left:auto}
-  .hd__nav{position:fixed;inset:0;margin:0;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;padding:var(--hd) var(--pad) 40px;background:var(--ink);transform:translateY(-100%);visibility:hidden;transition:transform .6s var(--ease),visibility .6s;z-index:-1}
+  .hd__nav{position:fixed;inset:0;height:100vh;height:100dvh;overflow-y:auto;overscroll-behavior:contain;margin:0;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;padding:var(--hd) var(--pad) 40px;background:var(--ink);transform:translateY(-100%);visibility:hidden;transition:transform .6s var(--ease),visibility .6s;z-index:-1}
   .hd__nav.open{transform:none;visibility:visible}
-  .hd__nav a{font:500 40px/1.25 var(--disp);letter-spacing:0;text-transform:none}
+  .hd__nav a:not(.hd__cta){font:500 40px/1.25 var(--disp);letter-spacing:0;text-transform:none}
   .hd__nav a::after{display:none}
   .hd__nav .hd__cta--m{display:inline-flex;margin-top:24px;font:600 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;padding:18px 26px}
   .hero{grid-template-columns:1fr;min-height:0}
