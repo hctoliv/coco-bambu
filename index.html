@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Coco Bambu · Frutos do mar, mais de 90 casas pelo Brasil</title>
+<meta name="description" content="Coco Bambu: especialistas em frutos do mar desde 1989. Camarão Internacional, moquecas, lagostas e paellas em mais de 90 restaurantes pelo Brasil. Reserve sua mesa, veja o cardápio e encontre a unidade mais perto.">
+<meta name="theme-color" content="#2a0c07">
+<meta property="og:title" content="Coco Bambu · O melhor do Brasil é a nossa especialidade">
+<meta property="og:description" content="Frutos do mar desde 1989, em mais de 90 casas pelo Brasil.">
+<meta property="og:image" content="https://hctoliv.github.io/coco-bambu/img/casa/salao-adega.jpg">
+<link rel="preload" as="image" href="video/paella.jpg">
+<link rel="icon" href="img/simbolo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=2">
+</head>
+<body>
+
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro__in">
+    <img src="img/simbolo.png" alt="" class="intro__sym">
+    <img src="img/logo-dourado.png" alt="" class="intro__logo">
+    <p class="intro__tag">desde 1989</p>
+  </div>
+</div>
+
+<header class="hd" id="hd">
+  <a href="#topo" class="hd__logo" aria-label="Coco Bambu, início"><img src="img/logo-dourado.png" alt="Coco Bambu" width="164" height="34"></a>
+  <nav class="hd__nav" id="nav" aria-label="Principal">
+    <a href="#cardapio">Cardápio</a>
+    <a href="#casa">A casa</a>
+    <a href="#historia">História</a>
+    <a href="#unidades">Unidades</a>
+    <a href="#eventos">Eventos</a>
+    <a href="#unidades" class="hd__cta hd__cta--m" data-acao="reservar">Reservar mesa</a>
+  </nav>
+  <a href="#unidades" class="hd__cta" data-acao="reservar">Reservar</a>
+  <button class="hd__burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+</header>
+
+<main id="topo">
+
+  <section class="hero" aria-label="Coco Bambu">
+    <div class="hero__txt">
+      <p class="eyebrow"><span></span>Frutos do mar desde 1989</p>
+      <h1 class="hero__t">
+        <span class="ln"><span>O melhor</span></span>
+        <span class="ln"><span>do Brasil é</span></span>
+        <span class="ln"><span>a nossa</span></span>
+        <span class="ln"><span><em>especialidade.</em></span></span>
+      </h1>
+      <p class="hero__sub">Camarões, lagostas, moquecas e paellas servidos com fartura, em casas de decoração rústica e elegante. Do Ceará para mais de 90 endereços pelo país.</p>
+      <div class="hero__btns">
+        <a href="#unidades" class="btn btn--gold" data-acao="reservar">Reservar uma mesa</a>
+        <a href="#cardapio" class="btn btn--line">Conhecer o cardápio</a>
+      </div>
+    </div>
+    <figure class="hero__media">
+      <video src="video/paella.mp4" poster="video/paella.jpg" autoplay muted loop playsinline preload="auto" aria-label="Paella Caldosa Coco Bambu sendo preparada no fogo"></video>
+      <figcaption><span>Na cozinha agora</span>Paella Caldosa Coco Bambu</figcaption>
+    </figure>
+  </section>
+
+  <section class="nums" id="numeros" aria-label="Coco Bambu em números">
+    <div class="num"><b data-count="90" data-prefix="+">90</b><span>casas pelo Brasil</span></div>
+    <div class="num"><b data-count="19">19</b><span>estados e o DF</span></div>
+    <div class="num"><b data-count="1989">1989</b><span>o primeiro balcão, em Fortaleza</span></div>
+    <div class="num"><b data-count="1200">1200</b><span>vinhos na adega de São Luís</span></div>
+  </section>
+
+  <div class="marq" aria-hidden="true">
+    <div class="marq__tr">
+      <span>Camarão Internacional</span><i>✦</i><span>Moqueca Cearense</span><i>✦</i><span>Rede de Pescador</span><i>✦</i><span>Lagosta a Thermidor</span><i>✦</i><span>Paella Caldosa</span><i>✦</i><span>Cocada ao Forno</span><i>✦</i>
+      <span>Camarão Internacional</span><i>✦</i><span>Moqueca Cearense</span><i>✦</i><span>Rede de Pescador</span><i>✦</i><span>Lagosta a Thermidor</span><i>✦</i><span>Paella Caldosa</span><i>✦</i><span>Cocada ao Forno</span><i>✦</i>
+    </div>
+  </div>
+
+  <section class="menu" id="cardapio">
+    <div class="sec-hd">
+      <p class="eyebrow"><span></span>Cardápio</p>
+      <h2 class="sec-t">Pratos que viraram <em>assinatura</em></h2>
+      <p class="sec-sub">Ingredientes frescos, porções generosas e receitas que atravessaram o país. Passe pelos pratos para ver cada um.</p>
+    </div>
+
+    <div class="tabs" role="tablist" aria-label="Categorias do cardápio">
+      <button role="tab" aria-selected="true" data-cat="camaroes">Camarões</button>
+      <button role="tab" aria-selected="false" data-cat="mar">Do mar</button>
+      <button role="tab" aria-selected="false" data-cat="novos">Lançamentos</button>
+      <button role="tab" aria-selected="false" data-cat="doces">Sobremesas</button>
+    </div>
+
+    <div class="carta">
+      <figure class="carta__foto">
+        <img id="cartaImg" src="img/pratos/camarao-internacional.jpg" alt="">
+        <figcaption id="cartaCap"></figcaption>
+      </figure>
+      <ol class="carta__lista" id="cartaLista"></ol>
+    </div>
+    <p class="menu__note">Preços e disponibilidade variam por unidade. <a href="#unidades" data-acao="cardapio">Abra o cardápio completo da sua casa</a>.</p>
+  </section>
+
+  <section class="casa" id="casa">
+    <div class="casa__intro">
+      <p class="eyebrow"><span></span>A casa</p>
+      <h2 class="sec-t">Rústico, elegante <em>e sempre cheio</em></h2>
+      <p class="sec-sub">Nossas unidades são amplas, de decoração rústica e elegante, pensadas para um almoço longo em família, um jantar a dois ou aquele happy hour que vira noite.</p>
+    </div>
+    <div class="casa__rail" id="rail">
+      <figure class="ph ph--t"><img src="img/casa/salao-vertical.jpg" alt="Salão com mesas postas e luz baixa" loading="lazy"><figcaption>O salão</figcaption></figure>
+      <figure class="ph ph--w"><img src="img/casa/salao-adega.jpg" alt="Mesa redonda sob pendente, com a adega ao fundo" loading="lazy"><figcaption>A adega</figcaption></figure>
+      <figure class="ph"><img src="img/casa/mesa-posta.jpg" alt="Mesa posta com guardanapos e taças" loading="lazy"><figcaption>Mesa posta · Londrina</figcaption></figure>
+      <figure class="ph ph--w"><img src="img/casa/fachada-morumbi.jpg" alt="Fachada do Coco Bambu iluminada" loading="lazy"><figcaption>A chegada</figcaption></figure>
+      <figure class="ph"><img src="img/casa/lounge.jpg" alt="Lounge com sofás e adega" loading="lazy"><figcaption>Lounge</figcaption></figure>
+      <figure class="ph ph--w"><img src="img/casa/salao-madeira.jpg" alt="Salão em madeira com mesas de família" loading="lazy"><figcaption>Mesas para a família toda</figcaption></figure>
+      <figure class="ph"><img src="img/casa/mesas.jpg" alt="Mesas redondas sob pendentes" loading="lazy"><figcaption>Luz de jantar</figcaption></figure>
+      <figure class="ph ph--w"><img src="img/casa/entrada-madeira.jpg" alt="Entrada do Coco Bambu revestida em madeira" loading="lazy"><figcaption>Bem-vindo</figcaption></figure>
+    </div>
+    <div class="casa__ctl">
+      <button class="arw" data-dir="-1" aria-label="Fotos anteriores">←</button>
+      <div class="casa__bar"><span id="railBar"></span></div>
+      <button class="arw" data-dir="1" aria-label="Próximas fotos">→</button>
+    </div>
+  </section>
+
+  <section class="hist" id="historia">
+    <div class="sec-hd sec-hd--light">
+      <p class="eyebrow"><span></span>Nossa história</p>
+      <h2 class="sec-t">De uma lojinha de esquina <em>para o Brasil</em></h2>
+    </div>
+    <div class="hist__wrap">
+      <div class="hist__ano" aria-hidden="true"><span id="anoAtual">1990</span></div>
+      <ol class="hist__lista">
+        <li class="mk" data-ano="1990">
+          <img src="img/historia/dom-pastel.jpg" alt="Casarão onde nasceu o Dom Pastel, em Fortaleza" loading="lazy">
+          <div><h3><b>1990</b> Nasce o Dom Pastel</h3><p>Afrânio e Daniela Barreira reformam a casa que foi do avô, Raimundo Pinheiro Barreira, e abrem na lojinha da esquina uma pastelaria diferente de tudo em Fortaleza. Foi ali que começou o caminho até o Coco Bambu.</p></div>
+        </li>
+        <li class="mk" data-ano="2001">
+          <img src="img/historia/meireles-2001.jpg" alt="Primeiro restaurante Coco Bambu, no Meireles" loading="lazy">
+          <div><h3><b>2001</b> O primeiro Coco Bambu</h3><p>No bairro Meireles, com decoração praiana e tropical, tapiocas, pizzas e crepes. Sucesso imediato com turistas e com quem é da terra.</p></div>
+        </li>
+        <li class="mk" data-ano="2005">
+          <img src="img/historia/salvador-2005.jpg" alt="Coco Bambu Salvador" loading="lazy">
+          <div><h3><b>2005</b> Primeira casa fora do Ceará</h3><p>Começa a expansão: Salvador recebe o Coco Bahia e todo o sabor da nossa cozinha.</p></div>
+        </li>
+        <li class="mk" data-ano="2009">
+          <img src="img/historia/lago-sul.jpg" alt="Coco Bambu Lago Sul, em Brasília" loading="lazy">
+          <div><h3><b>2009</b> Lago Sul, em Brasília</h3><p>A chegada à capital federal vira um dos maiores e mais premiados restaurantes do Brasil.</p></div>
+        </li>
+        <li class="mk" data-ano="2012">
+          <img src="img/historia/jk.jpg" alt="Coco Bambu JK, em São Paulo" loading="lazy">
+          <div><h3><b>2012</b> São Paulo, na Av. JK</h3><p>Tamanho, decoração e um cardápio extenso quebram tabus na cidade mais gastronômica do país. A marca se consolida de vez.</p></div>
+        </li>
+        <li class="mk" data-ano="2014">
+          <img src="img/historia/sao-luis-2014.jpg" alt="Coco Bambu São Luís" loading="lazy">
+          <div><h3><b>2014</b> O maior à la carte do Brasil</h3><p>São Luís ganha uma casa de 3 andares, 2 elevadores panorâmicos e 2 adegas para 1.200 vinhos num pé direito de 3,2 m.</p></div>
+        </li>
+        <li class="mk" data-ano="Hoje">
+          <img src="img/casa/fachada-jardim.jpg" alt="Fachada do Coco Bambu com jardim na entrada" loading="lazy">
+          <div><h3><b>Hoje</b> Mais de 90 casas</h3><p>Do Norte ao Sul, de Boa Vista a Porto Alegre. Só em 2024 foram 12 inaugurações, de Paralela ao Morumbi.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="uni" id="unidades">
+    <div class="sec-hd">
+      <p class="eyebrow"><span></span>Unidades</p>
+      <h2 class="sec-t">Encontre o Coco Bambu <em>mais perto de você</em></h2>
+      <p class="sec-sub" id="uniMsg">Escolha o estado ou procure pelo nome da casa. Daqui você já reserva, abre o cardápio da unidade ou chama no WhatsApp.</p>
+    </div>
+    <div class="uni__busca">
+      <label class="uni__q"><span class="sr">Buscar unidade</span><input type="search" id="uniQ" placeholder="Buscar por shopping, bairro ou cidade" autocomplete="off"></label>
+      <div class="uni__ufs" id="uniUfs" role="group" aria-label="Filtrar por estado"></div>
+    </div>
+    <p class="uni__count" id="uniCount" aria-live="polite"></p>
+    <ul class="uni__lista" id="uniLista"></ul>
+  </section>
+
+  <section class="ev" id="eventos">
+    <article class="ev__card">
+      <img src="img/casa/salao-madeira.jpg" alt="" loading="lazy">
+      <div class="ev__in">
+        <p class="eyebrow"><span></span>Eventos</p>
+        <h2 class="sec-t">Confraternizações <em>e eventos corporativos</em></h2>
+        <p>Sabe aqueles encontros que ficam guardados na memória? Muitos deles acontecem aqui. Espaço amplo, cozinha completa e uma equipe que cuida de tudo, da reunião de empresa à festa de fim de ano.</p>
+        <a href="#unidades" class="btn btn--gold" data-acao="evento">Pedir orçamento</a>
+      </div>
+    </article>
+    <article class="ev__card ev__card--gift">
+      <div class="gift" aria-hidden="true">
+        <div class="gift__c"><img src="img/logo-dourado.png" alt=""><span>Gift Card</span><i>R$ ••••</i></div>
+      </div>
+      <div class="ev__in">
+        <p class="eyebrow"><span></span>Gift Card</p>
+        <h2 class="sec-t">O melhor do Brasil <em>é presentear</em></h2>
+        <p>Cartão virtual no nome de quem você ama, com validade de 180 dias, para usar no salão ou no delivery de qualquer Coco Bambu, em quantas visitas quiser até zerar o saldo.</p>
+        <a href="https://cocobambu.com/gift-card" class="btn btn--line" target="_blank" rel="noopener">Comprar Gift Card</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="app">
+    <div class="app__in">
+      <p class="eyebrow"><span></span>Delivery</p>
+      <h2 class="sec-t">Coco Bambu <em>em casa</em></h2>
+      <p>Peça pelo app oficial, acompanhe a entrega e junte vantagens a cada pedido.</p>
+      <div class="app__btns">
+        <a href="https://app.cocobambu.com/" class="btn btn--gold" target="_blank" rel="noopener">Pedir delivery</a>
+        <a href="https://apps.apple.com/br/app/coco-bambu-restaurantes/id1475439061" class="btn btn--line" target="_blank" rel="noopener">App Store</a>
+        <a href="https://play.google.com/store/apps/details?id=com.cocobambu.cupdescprod&amp;hl=pt" class="btn btn--line" target="_blank" rel="noopener">Google Play</a>
+      </div>
+    </div>
+    <img src="img/pratos/camarao-coco-bambu.jpg" alt="Camarão Coco Bambu" class="app__img" loading="lazy">
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="ft__top">
+    <img src="img/logo-dourado.png" alt="Coco Bambu" class="ft__logo" loading="lazy">
+    <p class="ft__slogan">O melhor do Brasil é a nossa <em>especialidade.</em></p>
+  </div>
+  <div class="ft__cols">
+    <div><h4>Visite</h4><a href="#unidades">Unidades</a><a href="#unidades" data-acao="reservar">Reservas</a><a href="https://qr.cocobambu.com/todos-cardapios" target="_blank" rel="noopener">Todos os cardápios</a></div>
+    <div><h4>Fale com a gente</h4><a href="#" data-wa="Olá! Vim pelo site do Coco Bambu e queria uma ajuda.">WhatsApp SAC</a><a href="https://cocobambu.com/contactus" target="_blank" rel="noopener">Fale conosco</a><a href="https://cocobambu.gupy.io/" target="_blank" rel="noopener">Trabalhe conosco</a></div>
+    <div><h4>Siga</h4><a href="https://instagram.com/cocobambuoficial" target="_blank" rel="noopener">Instagram</a><a href="https://tiktok.com/@cocobambuoficial" target="_blank" rel="noopener">TikTok</a><a href="https://www.youtube.com/@cocobambuoficial" target="_blank" rel="noopener">YouTube</a><a href="https://facebook.com/cocobambuoficial" target="_blank" rel="noopener">Facebook</a><a href="https://linkedin.com/company/cocobamburestaurante" target="_blank" rel="noopener">LinkedIn</a></div>
+  </div>
+  <p class="ft__base">© Coco Bambu · desde 1989 · <a href="https://cocobambu.com/politica-privacidade" target="_blank" rel="noopener">Privacidade</a></p>
+</footer>
+
+<a href="#unidades" class="fab" data-acao="reservar" aria-label="Reservar mesa">Reservar</a>
+
+<script src="data.js?v=2"></script>
+<script src="main.js?v=2"></script>
+</body>
+</html>
