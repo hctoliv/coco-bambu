@@ -45,9 +45,20 @@
     burger.setAttribute('aria-expanded', String(open));
     burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
     document.documentElement.classList.toggle('nav-open', open);
+    if (fab) fab.classList.toggle('on', !open && window.scrollY > window.innerHeight * 0.9);
   });
   $$('a', nav).forEach(function (a) { a.addEventListener('click', closeNav); });
-  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) closeNav(); });
+  // iOS Safari ignora user-scalable=no: bloqueia o gesto de pinça e o zoom por toque duplo
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (ev) {
+    document.addEventListener(ev, function (e) { e.preventDefault(); }, { passive: false });
+  });
+  document.addEventListener('touchmove', function (e) { if (e.touches.length > 1) e.preventDefault(); }, { passive: false });
+  var ultimoToque = 0;
+  document.addEventListener('touchend', function (e) {
+    var t = Date.now();
+    if (t - ultimoToque < 300 && !e.target.closest('a,button,input,select,textarea,label')) e.preventDefault();
+    ultimoToque = t;
+  }, { passive: false });
   window.addEventListener('resize', function () { if (window.innerWidth > 900 && nav.classList.contains('open')) closeNav(); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeNav(); });
 
